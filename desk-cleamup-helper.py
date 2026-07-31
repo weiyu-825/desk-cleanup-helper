@@ -9,7 +9,6 @@ def analyze_desk_image(image_path):
     print(" 桌面雜物辨識與分類整理小幫手 v1.0")
     print("==========================================")
     
-    # 區塊 1：檢查並開啟圖片
     if not os.path.exists(image_path):
         print(f"【錯誤】找不到照片檔 '{image_path}'！請確認照片已放進資料夾。")
         return
@@ -21,22 +20,19 @@ def analyze_desk_image(image_path):
         print(f"【錯誤】圖片載入失敗：{e}")
         return
 
-    # 區塊 2：定義收納邏輯對照表
     category_rules = {
         "抽屜": ["筆", "橡皮擦", "剪刀", "立可帶", "尺", "訂書機", "文具"],
         "書架": ["課本", "筆記本", "小說", "漫畫", "資料夾", "書本"],
         "垃圾桶": ["空包袋", "廢紙", "飲料杯", "塑膠袋", "垃圾"]
     }
 
-    # 區塊 3：模擬 AI 視覺辨識出來的桌面物件清單
     detected_items = ["數學課本", "藍色原子筆", "洋芋片空包袋", "剪刀", "英文筆記本"]
 
     print("\n【AI 辨識與整理建議】")
     print("-" * 40)
 
-    # 區塊 4：邏輯比對並輸出建議
     for item in detected_items:
-        suggested_action = "放置於桌面固定收納盒"  # 預設位置
+        suggested_action = "放置於桌面固定收納盒" 
         
         for category, keywords in category_rules.items():
             if any(keyword in item for keyword in keywords):
