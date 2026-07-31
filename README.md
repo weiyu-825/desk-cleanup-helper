@@ -26,3 +26,8 @@
 開啟終端機 (CMD) 並執行以下命令：
 ```bash
 pip install Pillow
+
+### 3. 執行程式
+將一張書桌照片命名為 `desk.jpg` 並放入專案資料夾中，接著執行：
+```bash
+python main.py
