@@ -1,4 +1,3 @@
-# desk-cleanup-helper
 # Desk Cleanup Helper (AI 桌面雜物辨識小幫手)
 
 ## 1. 專題動機
